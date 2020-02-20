@@ -1,0 +1,35 @@
+<div class="slide slide-1" data-type="background" data-speed="3">
+</div>
+<div class="index-super-container">
+    <div class="slide slide-2">
+        <div class="description">
+            <div class="description-title">
+                <h1>Bacon Record</h1>
+            </div>
+            <div class="description-content">
+                <img src="assets/imgPlus/nochys/live/nochys_live2.jpg" alt="nochys_live2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequatur, iste minima reiciendis sint soluta vero! Asperiores debitis deleniti dolorum esse, et laborum repudiandae sapiente ullam vero voluptas! Alias aut commodi deserunt eius et fugit modi, quisquam quos sed suscipit tempore tenetur unde ut? Alias at blanditiis corporis delectus dignissimos distinctio dolores eaque est exercitationem facere fuga laudantium maiores nam natus necessitatibus nemo non officiis quaerat quasi, repellat, repudiandae similique tempora ut voluptatem, voluptatibus? Dolorum libero magnam natus nostrum quaerat quibusdam quod repudiandae, unde vitae. Ad aliquid consectetur debitis doloribus, fugit maxime odio odit quam rerum! Commodi fugiat nam voluptate?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque magni nobis officiis, perspiciatis sint vero voluptatum! Consequuntur itaque optio quasi.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequatur, iste minima reiciendis sint soluta vero! Asperiores debitis deleniti dolorum esse, et laborum repudiandae sapiente ullam vero voluptas! Alias aut commodi deserunt eius et fugit modi, quisquam quos sed suscipit tempore tenetur unde ut? Alias at blanditiis corporis delectus dignissimos distinctio dolores eaque est exercitationem facere fuga laudantium maiores nam natus necessitatibus nemo non officiis quaerat quasi, repellat, repudiandae similique tempora ut voluptatem, voluptatibus? Dolorum libero magnam natus nostrum quaerat quibusdam quod repudiandae, unde vitae. Ad aliquid consectetur debitis doloribus, fugit maxime odio odit quam rerum! Commodi fugiat nam voluptate?</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="news-container" id="newsContainer" onscroll="hideNewsContainer()">
+        <div class="news-icon" id="newsIcon">
+            <i class="far fa-bell" onclick="openNewsContent()"></i>
+        </div>
+        <?php foreach ($news as $new): ?>
+        <div class="news-card" id="newsCard">
+            <div class="news-title">
+                <h3><?php echo $new['Date'] ?></h3>
+            </div>
+            <div class="news-content">
+                <?php echo $new['Content'] ?>
+            </div>
+
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+

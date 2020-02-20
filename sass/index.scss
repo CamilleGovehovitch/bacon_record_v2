@@ -1,0 +1,93 @@
+*{
+  box-sizing: border-box;
+}
+.slide{
+  height: 100vh;
+  width: 100vw;
+}
+.slide-1{
+  background-image: url("../../assets/img/filter/filtre.jpg");
+  background-attachment: fixed;
+}
+.index-super-container{
+  .slide-2{
+    background-color: $backgroundColor;
+    .description{
+      margin: 0 40px;
+      padding-top: 20px;
+      .description-title{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        h1{
+          font-size: 24px;
+          font-family: "Rock Salt", cursive;
+          text-align: center;
+        }
+      }
+      .description-content{
+        img{
+          width: 200px;
+          float: left;
+          margin-right: 40px;
+          border: solid black 1px;
+        }
+        p{
+          font-size: 18px;
+          margin: 6px 0;
+        }
+      }
+      .clear{
+        clear: both;
+      }
+    }
+  }
+  .news-container{
+    background-color: $lightBlueColor;
+    height: 50px;
+    width:50px;
+    border-radius: 25px  0  0 25px;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    transition: all 400ms ease;
+    .news-icon{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        font-size: 18px;
+      }
+    }
+  }
+  .news-card{
+    height: 0;
+    width: 250px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    .news-title{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      h3{
+        font-size: 18px;
+      }
+    }
+  }
+  .news-card-opened {
+    background-color: $lightBlueColor;
+    height: auto;
+    overflow: scroll;
+  }
+  .news-container-opened{
+    background-color: $superLightBlueColor;
+    height: 50px;
+    width:250px;
+    border-radius: 25px  0  0 25px;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    margin-left: 150px;
+  }
+}
