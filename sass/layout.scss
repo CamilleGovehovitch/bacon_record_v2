@@ -112,6 +112,7 @@ $beigeColor: #F2E2C4;
   position: fixed;
   top: 0;
   box-shadow: 2px 1px 72px 10px rgba(0,0,0,1);
+  z-index: 1;
   .header-desktop{
     height: 100%;
     width: 100%;
@@ -199,6 +200,7 @@ $beigeColor: #F2E2C4;
 }
 .footer{
   background-color: $mainColor;
+
   width: 100vw;
   display: flex;
   .social-container{

@@ -1,20 +1,86 @@
-<div class="slide slide-1" data-type="background" data-speed="3">
+<div class="slide slide-1" data-type="background" data-speed="3" id="slide">
 </div>
-<div class="index-super-container">
-    <div class="slide slide-2">
+<!--<div class="index-super-container">-->
+    <div class="slide-2">
         <div class="description">
             <div class="description-title">
                 <h1>Bacon Record</h1>
             </div>
             <div class="description-content">
                 <img src="assets/imgPlus/nochys/live/nochys_live2.jpg" alt="nochys_live2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequatur, iste minima reiciendis sint soluta vero! Asperiores debitis deleniti dolorum esse, et laborum repudiandae sapiente ullam vero voluptas! Alias aut commodi deserunt eius et fugit modi, quisquam quos sed suscipit tempore tenetur unde ut? Alias at blanditiis corporis delectus dignissimos distinctio dolores eaque est exercitationem facere fuga laudantium maiores nam natus necessitatibus nemo non officiis quaerat quasi, repellat, repudiandae similique tempora ut voluptatem, voluptatibus? Dolorum libero magnam natus nostrum quaerat quibusdam quod repudiandae, unde vitae. Ad aliquid consectetur debitis doloribus, fugit maxime odio odit quam rerum! Commodi fugiat nam voluptate?</p>
+                <p>maiores nam natus necessitatibus nemo non officiis quaerat quasi, repellat, repudiandae similique tempora ut voluptatem, voluptatibus? Dolorum libero magnam natus nostrum quaerat quibusdam quod repudiandae, unde vitae. Ad aliquid consectetur debitis doloribus, fugit maxime odio odit quam rerum! Commodi fugiat nam voluptate?</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque magni nobis officiis, perspiciatis sint vero voluptatum! Consequuntur itaque optio quasi.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequatur, iste minima reiciendis sint soluta vero! Asperiores debitis deleniti dolorum esse, et laborum repudiandae sapiente ullam vero voluptas! Alias aut commodi deserunt eius et fugit modi, quisquam quos sed suscipit tempore tenetur unde ut? Alias at blanditiis corporis delectus dignissimos distinctio dolores eaque est exercitationem facere fuga laudantium maiores nam natus necessitatibus nemo non officiis quaerat quasi, repellat, repudiandae similique tempora ut voluptatem, voluptatibus? Dolorum libero magnam natus nostrum quaerat quibusdam quod repudiandae, unde vitae. Ad aliquid consectetur debitis doloribus, fugit maxime odio odit quam rerum! Commodi fugiat nam voluptate?</p>
+                <p>uasi repellat repudiandae similique tempora ut voluptatem, voluptatibus? Dolorum libero magnam natus nostrum quaerat quibusdam quod repudiandae, unde vitae. Ad aliquid consectetur debitis doloribus, fugit maxime odio odit quam rerum! Commodi fugiat nam voluptate?</p>
             </div>
             <div class="clear"></div>
         </div>
     </div>
+<!--    <div class="slide slide-3">-->
+        <div class="slide slide-3" data-type="background" data-speed="3"></div>
+        <section class="slide-4">
+            <div class="band-title-container">
+                <h3>Nos artistes</h3>
+            </div>
+            <div class="band-card-container">
+                <?php foreach($artistes as $artiste): ?>
+                    <a href="artiste.php?id=<?php echo $artiste['Id'] ?>">
+                        <div class="band-card" style="background-image: url('<?php echo $artiste['Card'] ?>');">
+                            <div class="filter">
+                                <div class="band-name">
+                                    <h3><?php echo $artiste['Name']; ?></h3>
+                                </div>
+                                <div class="band-content">
+                                    <p><?php echo $artiste['Description']; ?></p>
+                                </div>
+                                <div class="band-style">
+                                    <p><?php echo $artiste['Style'] ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+            <div class="band-card-container-mobile">
+                <?php foreach($artistes as $artiste): ?>
+                <a href="#">
+                    <div class="band-card">
+                            <div class="band-name">
+                                <h3><?php echo $artiste['Name']; ?></h3>
+                            </div>
+                            <div class="band-content">
+                                <p><?php echo $artiste['Description']; ?></p>
+                            </div>
+                            <div class="band-style">
+                                <p><?php echo $artiste['Style'] ?></p>
+                            </div>
+                    </div>
+                </a>
+                <?php endforeach; ?>
+            </div>
+        </section>
+        <div class="slide slide-5" data-type="background" data-speed="3" ></div>
+        <section class="media">
+            <div class="media-title">
+                <h3>Photos/Vidéos</h3>
+            </div>
+            <div class="gallery-pic">
+                <div class="img-grille-1"></div>
+                <div class="img-grille-2"></div>
+                <div class="img-grille-3"></div>
+                <div class="img-grille-4"></div>
+                <div class="img-grille-5"></div>
+                <div class="img-grille-6"></div>
+                <div class="img-grille-7"></div>
+                <div class="img-grille-8"></div>
+                <div class="img-grille-9"></div>
+                <div class="img-grille-10"></div>
+                <div class="img-grille-11"></div>
+                <div class="img-grille-12"></div>
+                <div class="img-grille-13"></div>
+                <div class="img-grille-14"></div>
+                <div class="img-grille-15"></div>
+            </div>
+        </section>
     <div class="news-container" id="newsContainer" onscroll="hideNewsContainer()">
         <div class="news-icon" id="newsIcon">
             <i class="far fa-bell" onclick="openNewsContent()"></i>
@@ -31,5 +97,6 @@
         </div>
         <?php endforeach; ?>
     </div>
-</div>
+<script src="scripts/galleryEffect.js"></script>
+<!--</div>-->
 

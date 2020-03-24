@@ -9,12 +9,12 @@
   background-image: url("../../assets/img/filter/filtre.jpg");
   background-attachment: fixed;
 }
-.index-super-container{
+//.index-super-container{
   .slide-2{
     background-color: $backgroundColor;
     .description{
       margin: 0 40px;
-      padding-top: 20px;
+      padding: 60px 0 40px 0;
       .description-title{
         margin-top: 20px;
         margin-bottom: 20px;
@@ -22,6 +22,7 @@
           font-size: 24px;
           font-family: "Rock Salt", cursive;
           text-align: center;
+          color: $mainColor;
         }
       }
       .description-content{
@@ -33,7 +34,9 @@
         }
         p{
           font-size: 18px;
-          margin: 6px 0;
+          margin: 10px 0;
+          line-height: 25px;
+          color: $mainColor;
         }
       }
       .clear{
@@ -41,15 +44,221 @@
       }
     }
   }
+  .slide-3{
+    background-image: url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live9.jpg");
+    background-attachment: fixed;
+  }
+  .slide-4{
+    background-color: $backgroundColor;
+    width: 100vw;
+    .band-title-container{
+      text-align: center;
+      margin: 0 40px;
+      padding: 60px 0 40px 0;
+      h3{
+        font-family: "Rock Salt", cursive;
+        font-size: 24px;
+      }
+    }
+    .band-card-container{
+      margin: 0 40px;
+      padding: 60px 0 40px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      a{
+        text-decoration: none;
+        color: black;
+        .band-card{
+          height: 400px;
+          width: 250px;
+          border-radius: 10px;
+          margin: 0 10px 10px 0;
+          box-shadow: 20px 18px 23px -14px black;
+          box-sizing: border-box;
+          .filter{
+            background-color: black;
+            height:100%;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+            .band-name{
+              background-color: whitesmoke;
+              height:80px;
+              width: 100%;
+              border-radius: 10px 10px 0 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              h3{
+                text-align: center;
+                font-size: 24px;
+                font-family: "Rock Salt", cursive;
+              }
+            }
+            .band-content{
+              height: 200px;
+              width: 100%;
+              padding: 10px 20px 10px 20px;
+              p{
+                font-size: 20px;
+                color: whitesmoke;
+              }
+            }
+            .band-style{
+              height: 120px;
+              width: 100%;
+              padding: 0 20px 10px 20px;
+              text-align: center;
+              p{
+                font-size: 20px;
+                font-weight: bold;
+                color: whitesmoke;
+              }
+            }
+          }
+          &:hover .filter{
+            opacity: 1;
+          }
+        }
+        .band-card-opened{
+          background-color: greenyellow;
+          height: 400px;
+          width: 250px;
+        }
+      }
+    }
+    .band-card-container-mobile{
+      display: none;
+    }
+  }
+  .slide-5{
+    background-image: url("../../assets/imgPlus/nochys/live/nochys_live1.jpg");
+    background-attachment: fixed;
+  }
+  .media{
+    background-color: red;
+    .media-title{
+      text-align: center;
+      h3{
+        padding-top:10px;
+        font-size: 24px;
+      }
+    }
+    .gallery-pic{
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      justify-content: center;
+      grid-template-rows: repeat(9, 1fr);
+      grid-template-columns:repeat(9, 1fr);
+      grid-gap: 4em;
+      background-color: blue;
+      .img-grille-1{
+        background-image:url("../../assets/img/artwork/john-a.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 1/6/5/4;
+      }
+
+      .img-grille-2{
+        background-image:url("../../assets/imgPlus/iamjohnbaudelaire/pochette/pochette-john-2.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 2/6/6/9;
+      }
+      .img-grille-3{
+        background-image:url("../../assets/imgPlus/nochys/live/nochys_live3.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 5/4/10/8;
+      }
+      .img-grille-4{
+        background-image:url("../../assets/imgPlus/nochys/pochette/Eat Eggs In The Morning pochette.JPG");
+        background-position:center;
+        background-size:cover;
+        grid-area: 1/5/4/7;;
+      }
+      .img-grille-5{
+        background-image:url("../../assets/imgPlus/tomoe/flyer/flyer-tomoe-3.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area:1/5/2/6;
+      }
+      .img-grille-6{
+        background-image:url("../../assets/imgPlus/tomoe/live/tomoe_live2.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 1/6/5/9;
+      }
+      .img-grille-7{
+        background-image:url("../../assets/imgPlus/yourdaywillcome/pochette/pochette-day-1.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 3/3/8/9;
+      }
+      .img-grille-8{
+        background-image:url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live2.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 1/3/6/5;
+      }
+      .img-grille-9{
+        background-image:url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live5.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 4/2/10/4;
+      }
+      .img-grille-10{
+        background-image:url("../../assets/imgPlus/tomoe/pochette/tomoe_artwork1.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 4/1/8/3;
+      }
+      .img-grille-11{
+        background-image:url("../../assets/imgPlus/nochys/live/nochys_live7.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 5/3/10/5;
+      }
+      .img-grille-12{
+        background-image:url("../../assets/imgPlus/nochys/pochette/pochette-nochys-1.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area:7/8/8/9;
+      }
+      .img-grille-13{
+        background-image:url("../../assets/imgPlus/iamjohnbaudelaire/live/john_live5.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area:7/8/8/9;
+      }
+      .img-grille-14{
+        background-image:url("../../assets/imgPlus/tomoe/live/tomoe_live4.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 1/1/10/3;
+      }
+      .img-grille-15{
+        background-image:url("../../assets/imgPlus/tomoe/live/tomoe_live5.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 5/8/9/10;
+      }
+
+    }
+  }
   .news-container{
     background-color: $lightBlueColor;
     height: 50px;
     width:50px;
     border-radius: 25px  0  0 25px;
+    visibility: hidden;
     position: fixed;
     top: 100px;
     right: 0;
     transition: all 400ms ease;
+    z-index: 1;
     .news-icon{
       height: 100%;
       width: 100%;
@@ -90,4 +299,82 @@
     right: 0;
     margin-left: 150px;
   }
-}
+
+@media screen and (max-width: 779px) {
+  .slide{
+
+  }
+  .slide-1{
+
+  }
+  .slide-2{
+    .description{
+      .description-title{
+        h3{
+        }
+      }
+      .description-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+          float: inherit;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .slide-3{
+
+  }
+  .slide-4{
+    .band-title-container{
+      h3{
+        color: $mainColor;
+      }
+    }
+    .band-card-container{
+      display: none;
+    }
+    .band-card-container-mobile{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a{
+        text-decoration: none;
+        color: $mainColor;
+        .band-card{
+          background-color: $superLightBlueColor;
+          height: 200px;
+          width: 300px;
+          margin-bottom: 20px;
+          border-radius: 25px;
+          box-shadow: 20px 18px 23px -14px black;
+          .band-name{
+            height: 50px;
+            width: 100%;
+            padding-top: 10px;
+            text-align: center;
+            h3{
+              font-family: "Rock Salt", cursive;
+            }
+          }
+          .band-content{
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            padding: 0 10px;
+          }
+          .band-style{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  }

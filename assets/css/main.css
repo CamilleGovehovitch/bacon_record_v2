@@ -103,6 +103,7 @@
   position: fixed;
   top: 0;
   box-shadow: 2px 1px 72px 10px black;
+  z-index: 1;
 }
 .sticky .header-desktop {
   height: 100%;
@@ -406,75 +407,290 @@
   background-attachment: fixed;
 }
 
-.index-super-container .slide-2 {
+.slide-2 {
   background-color: #61678C;
 }
-.index-super-container .slide-2 .description {
+.slide-2 .description {
   margin: 0 40px;
-  padding-top: 20px;
+  padding: 60px 0 40px 0;
 }
-.index-super-container .slide-2 .description .description-title {
+.slide-2 .description .description-title {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.index-super-container .slide-2 .description .description-title h1 {
+.slide-2 .description .description-title h1 {
   font-size: 24px;
   font-family: "Rock Salt", cursive;
   text-align: center;
+  color: #222940;
 }
-.index-super-container .slide-2 .description .description-content img {
+.slide-2 .description .description-content img {
   width: 200px;
   float: left;
   margin-right: 40px;
   border: solid black 1px;
 }
-.index-super-container .slide-2 .description .description-content p {
+.slide-2 .description .description-content p {
   font-size: 18px;
-  margin: 6px 0;
+  margin: 10px 0;
+  line-height: 25px;
+  color: #222940;
 }
-.index-super-container .slide-2 .description .clear {
+.slide-2 .description .clear {
   clear: both;
 }
-.index-super-container .news-container {
+
+.slide-3 {
+  background-image: url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live9.jpg");
+  background-attachment: fixed;
+}
+
+.slide-4 {
+  background-color: #61678C;
+  width: 100vw;
+}
+.slide-4 .band-title-container {
+  text-align: center;
+  margin: 0 40px;
+  padding: 60px 0 40px 0;
+}
+.slide-4 .band-title-container h3 {
+  font-family: "Rock Salt", cursive;
+  font-size: 24px;
+}
+.slide-4 .band-card-container {
+  margin: 0 40px;
+  padding: 60px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.slide-4 .band-card-container a {
+  text-decoration: none;
+  color: black;
+}
+.slide-4 .band-card-container a .band-card {
+  height: 400px;
+  width: 250px;
+  border-radius: 10px;
+  margin: 0 10px 10px 0;
+  box-shadow: 20px 18px 23px -14px black;
+  box-sizing: border-box;
+}
+.slide-4 .band-card-container a .band-card .filter {
+  background-color: black;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.slide-4 .band-card-container a .band-card .filter .band-name {
+  background-color: whitesmoke;
+  height: 80px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide-4 .band-card-container a .band-card .filter .band-name h3 {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Rock Salt", cursive;
+}
+.slide-4 .band-card-container a .band-card .filter .band-content {
+  height: 200px;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+}
+.slide-4 .band-card-container a .band-card .filter .band-content p {
+  font-size: 20px;
+  color: whitesmoke;
+}
+.slide-4 .band-card-container a .band-card .filter .band-style {
+  height: 120px;
+  width: 100%;
+  padding: 0 20px 10px 20px;
+  text-align: center;
+}
+.slide-4 .band-card-container a .band-card .filter .band-style p {
+  font-size: 20px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+.slide-4 .band-card-container a .band-card:hover .filter {
+  opacity: 1;
+}
+.slide-4 .band-card-container a .band-card-opened {
+  background-color: greenyellow;
+  height: 400px;
+  width: 250px;
+}
+.slide-4 .band-card-container-mobile {
+  display: none;
+}
+
+.slide-5 {
+  background-image: url("../../assets/imgPlus/nochys/live/nochys_live1.jpg");
+  background-attachment: fixed;
+}
+
+.media {
+  background-color: red;
+}
+.media .media-title {
+  text-align: center;
+}
+.media .media-title h3 {
+  padding-top: 10px;
+  font-size: 24px;
+}
+.media .gallery-pic {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 4em;
+  background-color: blue;
+}
+.media .gallery-pic .img-grille-1 {
+  background-image: url("../../assets/img/artwork/john-a.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 1/6/5/4;
+}
+.media .gallery-pic .img-grille-2 {
+  background-image: url("../../assets/imgPlus/iamjohnbaudelaire/pochette/pochette-john-2.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 2/6/6/9;
+}
+.media .gallery-pic .img-grille-3 {
+  background-image: url("../../assets/imgPlus/nochys/live/nochys_live3.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 5/4/10/8;
+}
+.media .gallery-pic .img-grille-4 {
+  background-image: url("../../assets/imgPlus/nochys/pochette/Eat Eggs In The Morning pochette.JPG");
+  background-position: center;
+  background-size: cover;
+  grid-area: 1/5/4/7;
+}
+.media .gallery-pic .img-grille-5 {
+  background-image: url("../../assets/imgPlus/tomoe/flyer/flyer-tomoe-3.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 1/5/2/6;
+}
+.media .gallery-pic .img-grille-6 {
+  background-image: url("../../assets/imgPlus/tomoe/live/tomoe_live2.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 1/6/5/9;
+}
+.media .gallery-pic .img-grille-7 {
+  background-image: url("../../assets/imgPlus/yourdaywillcome/pochette/pochette-day-1.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 3/3/8/9;
+}
+.media .gallery-pic .img-grille-8 {
+  background-image: url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live2.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 1/3/6/5;
+}
+.media .gallery-pic .img-grille-9 {
+  background-image: url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live5.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 4/2/10/4;
+}
+.media .gallery-pic .img-grille-10 {
+  background-image: url("../../assets/imgPlus/tomoe/pochette/tomoe_artwork1.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 4/1/8/3;
+}
+.media .gallery-pic .img-grille-11 {
+  background-image: url("../../assets/imgPlus/nochys/live/nochys_live7.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 5/3/10/5;
+}
+.media .gallery-pic .img-grille-12 {
+  background-image: url("../../assets/imgPlus/nochys/pochette/pochette-nochys-1.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 7/8/8/9;
+}
+.media .gallery-pic .img-grille-13 {
+  background-image: url("../../assets/imgPlus/iamjohnbaudelaire/live/john_live5.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 7/8/8/9;
+}
+.media .gallery-pic .img-grille-14 {
+  background-image: url("../../assets/imgPlus/tomoe/live/tomoe_live4.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 1/1/10/3;
+}
+.media .gallery-pic .img-grille-15 {
+  background-image: url("../../assets/imgPlus/tomoe/live/tomoe_live5.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 5/8/9/10;
+}
+
+.news-container {
   background-color: #7798D9;
   height: 50px;
   width: 50px;
   border-radius: 25px 0 0 25px;
+  visibility: hidden;
   position: fixed;
   top: 100px;
   right: 0;
   transition: all 400ms ease;
+  z-index: 1;
 }
-.index-super-container .news-container .news-icon {
+.news-container .news-icon {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.index-super-container .news-container .news-icon i {
+.news-container .news-icon i {
   font-size: 18px;
 }
-.index-super-container .news-card {
+
+.news-card {
   height: 0;
   width: 250px;
   transition: all 400ms ease;
   overflow: hidden;
 }
-.index-super-container .news-card .news-title {
+.news-card .news-title {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
 }
-.index-super-container .news-card .news-title h3 {
+.news-card .news-title h3 {
   font-size: 18px;
 }
-.index-super-container .news-card-opened {
+
+.news-card-opened {
   background-color: #7798D9;
   height: auto;
   overflow: scroll;
 }
-.index-super-container .news-container-opened {
+
+.news-container-opened {
   background-color: #C2D2F2;
   height: 50px;
   width: 250px;
@@ -483,4 +699,258 @@
   top: 100px;
   right: 0;
   margin-left: 150px;
+}
+
+@media screen and (max-width: 779px) {
+  .slide-2 .description .description-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slide-2 .description .description-content img {
+    float: inherit;
+    margin-right: 0;
+  }
+
+  .slide-4 .band-title-container h3 {
+    color: #222940;
+  }
+  .slide-4 .band-card-container {
+    display: none;
+  }
+  .slide-4 .band-card-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slide-4 .band-card-container-mobile a {
+    text-decoration: none;
+    color: #222940;
+  }
+  .slide-4 .band-card-container-mobile a .band-card {
+    background-color: #C2D2F2;
+    height: 200px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 20px 18px 23px -14px black;
+  }
+  .slide-4 .band-card-container-mobile a .band-card .band-name {
+    height: 50px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .slide-4 .band-card-container-mobile a .band-card .band-name h3 {
+    font-family: "Rock Salt", cursive;
+  }
+  .slide-4 .band-card-container-mobile a .band-card .band-content {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .slide-4 .band-card-container-mobile a .band-card .band-style {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.artiste-header {
+  height: 100vh;
+  width: 100vw;
+}
+
+.artist-content {
+  padding: 40px 40px;
+  background-color: #61678C;
+}
+.artist-content .artist-name {
+  background-color: #222940;
+  padding: 70px 0;
+  border-radius: 25px;
+  text-align: center;
+}
+.artist-content .artist-name h3 {
+  font-family: "Rock Salt", cursive;
+  font-size: 24px;
+  color: #7798D9;
+}
+.artist-content .artist-description {
+  background-color: #222940;
+  margin: 30px 0;
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 25px;
+}
+.artist-content .artist-description p {
+  font-size: 18px;
+  color: #7798D9;
+}
+.artist-content .albums-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.artist-content .albums-container .album-card {
+  height: 400px;
+  width: 250px;
+  border-radius: 25px;
+}
+.artist-content .albums-container .album-card .album-content {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  border-radius: 25px;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+}
+.artist-content .albums-container .album-card .album-content ul li {
+  color: white;
+  font-size: 18px;
+}
+.artist-content .albums-container .album-card:hover .album-content {
+  opacity: 1;
+}
+.artist-content .options {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  min-width: 600px;
+  max-width: 900px;
+  width: calc(100% - 100px);
+  height: 400px;
+}
+@media screen and (max-width: 718px) {
+  .artist-content .options {
+    min-width: 520px;
+  }
+  .artist-content .options .option:nth-child(5) {
+    display: none;
+  }
+}
+@media screen and (max-width: 638px) {
+  .artist-content .options {
+    min-width: 440px;
+  }
+  .artist-content .options .option:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 558px) {
+  .artist-content .options {
+    min-width: 360px;
+  }
+  .artist-content .options .option:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 478px) {
+  .artist-content .options {
+    min-width: 280px;
+  }
+  .artist-content .options .option:nth-child(2) {
+    display: none;
+  }
+}
+.artist-content .options .option {
+  position: relative;
+  overflow: hidden;
+  min-width: 60px;
+  margin: 10px;
+  background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+  background-size: auto 120%;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.artist-content .options .option:nth-child(1) {
+  --defaultBackground:#61678C;
+}
+.artist-content .options .option.active {
+  flex-grow: 10000;
+  transform: scale(1);
+  max-width: 600px;
+  margin: 0px;
+  border-radius: 40px;
+  background-size: auto 100%;
+  /*&:active {
+     transform:scale(0.9);
+  }*/
+}
+.artist-content .options .option.active .shadow {
+  box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+}
+.artist-content .options .option.active .label {
+  bottom: 20px;
+  left: 20px;
+}
+.artist-content .options .option.active .label .info > div {
+  left: 0px;
+  opacity: 1;
+}
+.artist-content .options .option:not(.active) {
+  flex-grow: 1;
+  border-radius: 30px;
+}
+.artist-content .options .option:not(.active) .shadow {
+  bottom: -40px;
+  box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+.artist-content .options .option:not(.active) .label {
+  bottom: 10px;
+  left: 10px;
+}
+.artist-content .options .option:not(.active) .label .info > div {
+  left: 20px;
+  opacity: 0;
+}
+.artist-content .options .option .shadow {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 120px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.artist-content .options .option .label {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  height: 40px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.artist-content .options .option .label .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  color: var(--defaultBackground);
+}
+.artist-content .options .option .label .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  color: white;
+  white-space: pre;
+}
+.artist-content .options .option .label .info > div {
+  position: relative;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+.artist-content .options .option .label .info .main {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.artist-content .options .option .label .info .sub {
+  transition-delay: 0.1s;
 }

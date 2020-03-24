@@ -18,7 +18,7 @@
             </div>
             <div class="logo-navbar-container">
                 <div class="logo-container">
-                    <a href="#">
+                    <a href="index.php">
                         <i class="fas fa-piggy-bank" id="logo"></i>
                     </a>
                 </div>
@@ -30,8 +30,8 @@
                         <li class="catalogue-hover">
                             <a href="#">Catalogue</a>
                             <ul class="sub-menu">
-                                <?php foreach($artistes as $artiste): ?>
-                                <li><a href="#"><?php echo $artiste['Name'] ?></a></li>
+                                <?php foreach($artistes as $art): ?>
+                                <li><a href="artiste.php?id=<?php echo $art['Id']?>"><?php echo $art['Name']?></a></li>
                                 <?php endforeach; ?>
                             </ul>
                         </li>
@@ -53,8 +53,8 @@
         </div>
         <div class="navbar-mobile" id="navbarMobile">
             <ul class="ul-navbar-mobile">
-                <?php foreach($artistes as $artiste): ?>
-                <li><a href="#"><?php echo $artiste['Name'] ?></a></li>
+                <?php foreach($artistes as $art): ?>
+                <li><a href="artiste.php?id=<?php echo $art['Id'] ?>&titre=<?php echo $art['Name']  ?>"><?php echo $art['Name'] ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -71,15 +71,16 @@
             </ul>
         </div>
         <div class="newsletter-container">
-            <form method="POST">
+            <form method="POST" action="index.php" id="newsletterForm">
                 <label for="newsletter">Newsletter</label>
-                <input type="text" name="newsletter" id="newsletter" placeholder="exemple@exemple.com" required>
-                <input type="submit" value="Envoyer" id="submitBtn">
+                <input type="text" name="newsletter" id="newsletterInput" value="" placeholder="exemple@exemple.com" onkeyup="enableNewsletter()" onsubmit="emailIsValid()">
+                <input type="submit" value="Envoyer" id="submitBtn" disabled>
             </form>
         </div>
     </footer>
     <script src="scripts/parallaxEffect.js"></script>
     <script src="scripts/navbarEffect.js"></script>
     <script src="scripts/newsContainerEffect.js"></script>
+    <script src="scripts/newsletterFormValidation.js"></script>
 </body>
 </html>

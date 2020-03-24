@@ -1,13 +1,14 @@
 <?php include'application/bdd_connection.php';
 
-$query = 'SELECT * FROM User ';
-$resultSet = $pdo->query($query);
+$artistesQuery = 'SELECT * FROM User ';
+$resultSet = $pdo->prepare($artistesQuery);
+$resultSet->execute();
 $artistes = $resultSet->fetchAll();
 
 $query = 'SELECT * FROM News';
-$resultSet = $pdo->query($query);
+$resultSet = $pdo->prepare($query);
+$resultSet->execute();
 $news = $resultSet->fetchAll();
-
 
 if(isset($_POST["newsletter"])){
     $email = $_POST["newsletter"];

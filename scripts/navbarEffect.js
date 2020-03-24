@@ -16,10 +16,8 @@ function navbarSticky() {
 function openMenu(){
     if(navbarMobile.classList.contains('navbar-mobile-opened')){
         navbarMobile.classList.remove('navbar-mobile-opened');
-        //navbarMobile.classList.add('navbar-mobile');
     }else{
         navbarMobile.classList.add('navbar-mobile-opened');
-       // navbarMobile.classList.remove('navbar-mobile');
     }
 
 }
