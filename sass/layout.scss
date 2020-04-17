@@ -248,6 +248,12 @@ $beigeColor: #F2E2C4;
         border-radius: 25px;
         text-align: center;
       }
+      .valid-email{
+        border: solid 2px yellowgreen;
+      }
+      .not-valid-email{
+        border: solid 2px red;
+      }
     }
   }
 }

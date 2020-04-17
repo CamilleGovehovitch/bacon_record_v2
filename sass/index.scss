@@ -137,23 +137,23 @@
     background-attachment: fixed;
   }
   .media{
-    background-color: red;
+    background-color: $backgroundColor;
     .media-title{
       text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
       h3{
         padding-top:10px;
         font-size: 24px;
+        font-family: "Rock Salt", cursive;
       }
     }
     .gallery-pic{
-      margin-left: auto;
-      margin-right: auto;
       display: grid;
       justify-content: center;
       grid-template-rows: repeat(9, 1fr);
       grid-template-columns:repeat(9, 1fr);
       grid-gap: 4em;
-      background-color: blue;
       .img-grille-1{
         background-image:url("../../assets/img/artwork/john-a.jpg");
         background-position:center;
@@ -165,7 +165,7 @@
         background-image:url("../../assets/imgPlus/iamjohnbaudelaire/pochette/pochette-john-2.jpg");
         background-position:center;
         background-size:cover;
-        grid-area: 2/6/6/9;
+        grid-area: 1/6/3/8;
       }
       .img-grille-3{
         background-image:url("../../assets/imgPlus/nochys/live/nochys_live3.jpg");
@@ -174,7 +174,7 @@
         grid-area: 5/4/10/8;
       }
       .img-grille-4{
-        background-image:url("../../assets/imgPlus/nochys/pochette/Eat Eggs In The Morning pochette.JPG");
+        background-image:url("../../assets/imgPlus/iamjohnbaudelaire/live/john_live3.jpg");
         background-position:center;
         background-size:cover;
         grid-area: 1/5/4/7;;
@@ -183,7 +183,7 @@
         background-image:url("../../assets/imgPlus/tomoe/flyer/flyer-tomoe-3.jpg");
         background-position:center;
         background-size:cover;
-        grid-area:1/5/2/6;
+        grid-area: 1/8/5/10;
       }
       .img-grille-6{
         background-image:url("../../assets/imgPlus/tomoe/live/tomoe_live2.jpg");
@@ -207,25 +207,25 @@
         background-image:url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live5.jpg");
         background-position:center;
         background-size:cover;
-        grid-area: 4/2/10/4;
+        grid-area: 1/2/7/4;
       }
       .img-grille-10{
         background-image:url("../../assets/imgPlus/tomoe/pochette/tomoe_artwork1.jpg");
         background-position:center;
         background-size:cover;
-        grid-area: 4/1/8/3;
+        grid-area: 8/7/10/10;
       }
       .img-grille-11{
         background-image:url("../../assets/imgPlus/nochys/live/nochys_live7.jpg");
         background-position:center;
         background-size:cover;
-        grid-area: 5/3/10/5;
+        grid-area: 4/2/10/5;
       }
       .img-grille-12{
         background-image:url("../../assets/imgPlus/nochys/pochette/pochette-nochys-1.jpg");
         background-position:center;
         background-size:cover;
-        grid-area:7/8/8/9;
+        grid-area: 1/2/3/5;
       }
       .img-grille-13{
         background-image:url("../../assets/imgPlus/iamjohnbaudelaire/live/john_live5.jpg");
@@ -234,7 +234,7 @@
         grid-area:7/8/8/9;
       }
       .img-grille-14{
-        background-image:url("../../assets/imgPlus/tomoe/live/tomoe_live4.jpg");
+        background-image:url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live13.jpg");
         background-position:center;
         background-size:cover;
         grid-area: 1/1/10/3;
@@ -243,9 +243,14 @@
         background-image:url("../../assets/imgPlus/tomoe/live/tomoe_live5.jpg");
         background-position:center;
         background-size:cover;
-        grid-area: 5/8/9/10;
+        grid-area: 5/4/9/4;
       }
-
+      .img-grille-16{
+        background-image:url("../../assets/imgPlus/nochys/flyer/nochys_flyer3.jpg");
+        background-position:center;
+        background-size:cover;
+        grid-area: 4/7/9/10;
+      }
     }
   }
   .news-container{
@@ -338,9 +343,11 @@
     }
     .band-card-container-mobile{
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
       a{
+        margin: 0 20px;
         text-decoration: none;
         color: $mainColor;
         .band-card{
@@ -375,6 +382,12 @@
         }
       }
     }
+  }
+  .slide-5{
+    display: none;
+  }
+  .media{
+    display: none;
   }
 
   }

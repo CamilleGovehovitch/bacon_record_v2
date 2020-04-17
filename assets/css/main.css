@@ -235,6 +235,12 @@
   border-radius: 25px;
   text-align: center;
 }
+.footer .newsletter-container form .valid-email {
+  border: solid 2px yellowgreen;
+}
+.footer .newsletter-container form .not-valid-email {
+  border: solid 2px red;
+}
 
 @media screen and (max-width: 779px) {
   .header .header-desktop {
@@ -536,24 +542,24 @@
 }
 
 .media {
-  background-color: red;
+  background-color: #61678C;
 }
 .media .media-title {
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .media .media-title h3 {
   padding-top: 10px;
   font-size: 24px;
+  font-family: "Rock Salt", cursive;
 }
 .media .gallery-pic {
-  margin-left: auto;
-  margin-right: auto;
   display: grid;
   justify-content: center;
   grid-template-rows: repeat(9, 1fr);
   grid-template-columns: repeat(9, 1fr);
   grid-gap: 4em;
-  background-color: blue;
 }
 .media .gallery-pic .img-grille-1 {
   background-image: url("../../assets/img/artwork/john-a.jpg");
@@ -565,7 +571,7 @@
   background-image: url("../../assets/imgPlus/iamjohnbaudelaire/pochette/pochette-john-2.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: 2/6/6/9;
+  grid-area: 1/6/3/8;
 }
 .media .gallery-pic .img-grille-3 {
   background-image: url("../../assets/imgPlus/nochys/live/nochys_live3.jpg");
@@ -574,7 +580,7 @@
   grid-area: 5/4/10/8;
 }
 .media .gallery-pic .img-grille-4 {
-  background-image: url("../../assets/imgPlus/nochys/pochette/Eat Eggs In The Morning pochette.JPG");
+  background-image: url("../../assets/imgPlus/iamjohnbaudelaire/live/john_live3.jpg");
   background-position: center;
   background-size: cover;
   grid-area: 1/5/4/7;
@@ -583,7 +589,7 @@
   background-image: url("../../assets/imgPlus/tomoe/flyer/flyer-tomoe-3.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: 1/5/2/6;
+  grid-area: 1/8/5/10;
 }
 .media .gallery-pic .img-grille-6 {
   background-image: url("../../assets/imgPlus/tomoe/live/tomoe_live2.jpg");
@@ -607,25 +613,25 @@
   background-image: url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live5.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: 4/2/10/4;
+  grid-area: 1/2/7/4;
 }
 .media .gallery-pic .img-grille-10 {
   background-image: url("../../assets/imgPlus/tomoe/pochette/tomoe_artwork1.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: 4/1/8/3;
+  grid-area: 8/7/10/10;
 }
 .media .gallery-pic .img-grille-11 {
   background-image: url("../../assets/imgPlus/nochys/live/nochys_live7.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: 5/3/10/5;
+  grid-area: 4/2/10/5;
 }
 .media .gallery-pic .img-grille-12 {
   background-image: url("../../assets/imgPlus/nochys/pochette/pochette-nochys-1.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: 7/8/8/9;
+  grid-area: 1/2/3/5;
 }
 .media .gallery-pic .img-grille-13 {
   background-image: url("../../assets/imgPlus/iamjohnbaudelaire/live/john_live5.jpg");
@@ -634,7 +640,7 @@
   grid-area: 7/8/8/9;
 }
 .media .gallery-pic .img-grille-14 {
-  background-image: url("../../assets/imgPlus/tomoe/live/tomoe_live4.jpg");
+  background-image: url("../../assets/imgPlus/yourdaywillcome/live/ydwc_live13.jpg");
   background-position: center;
   background-size: cover;
   grid-area: 1/1/10/3;
@@ -643,7 +649,13 @@
   background-image: url("../../assets/imgPlus/tomoe/live/tomoe_live5.jpg");
   background-position: center;
   background-size: cover;
-  grid-area: 5/8/9/10;
+  grid-area: 5/4/9/4;
+}
+.media .gallery-pic .img-grille-16 {
+  background-image: url("../../assets/imgPlus/nochys/flyer/nochys_flyer3.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: 4/7/9/10;
 }
 
 .news-container {
@@ -720,10 +732,12 @@
   }
   .slide-4 .band-card-container-mobile {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
   }
   .slide-4 .band-card-container-mobile a {
+    margin: 0 20px;
     text-decoration: none;
     color: #222940;
   }
@@ -756,6 +770,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .slide-5 {
+    display: none;
+  }
+
+  .media {
+    display: none;
   }
 }
 .artiste-header {
@@ -792,165 +814,9 @@
 .artist-content .albums-container {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
 }
-.artist-content .albums-container .album-card {
-  height: 400px;
-  width: 250px;
-  border-radius: 25px;
-}
-.artist-content .albums-container .album-card .album-content {
-  height: 100%;
-  width: 100%;
+.artist-content .albums-container .album-artwork {
   background-color: red;
-  border-radius: 25px;
-  transition: opacity 2s ease-in-out;
-  opacity: 0;
-}
-.artist-content .albums-container .album-card .album-content ul li {
-  color: white;
-  font-size: 18px;
-}
-.artist-content .albums-container .album-card:hover .album-content {
-  opacity: 1;
-}
-.artist-content .options {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  overflow: hidden;
-  min-width: 600px;
-  max-width: 900px;
-  width: calc(100% - 100px);
-  height: 400px;
-}
-@media screen and (max-width: 718px) {
-  .artist-content .options {
-    min-width: 520px;
-  }
-  .artist-content .options .option:nth-child(5) {
-    display: none;
-  }
-}
-@media screen and (max-width: 638px) {
-  .artist-content .options {
-    min-width: 440px;
-  }
-  .artist-content .options .option:nth-child(4) {
-    display: none;
-  }
-}
-@media screen and (max-width: 558px) {
-  .artist-content .options {
-    min-width: 360px;
-  }
-  .artist-content .options .option:nth-child(3) {
-    display: none;
-  }
-}
-@media screen and (max-width: 478px) {
-  .artist-content .options {
-    min-width: 280px;
-  }
-  .artist-content .options .option:nth-child(2) {
-    display: none;
-  }
-}
-.artist-content .options .option {
-  position: relative;
-  overflow: hidden;
-  min-width: 60px;
-  margin: 10px;
-  background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
-  background-size: auto 120%;
-  background-position: center;
-  cursor: pointer;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-}
-.artist-content .options .option:nth-child(1) {
-  --defaultBackground:#61678C;
-}
-.artist-content .options .option.active {
-  flex-grow: 10000;
-  transform: scale(1);
-  max-width: 600px;
-  margin: 0px;
-  border-radius: 40px;
-  background-size: auto 100%;
-  /*&:active {
-     transform:scale(0.9);
-  }*/
-}
-.artist-content .options .option.active .shadow {
-  box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
-}
-.artist-content .options .option.active .label {
-  bottom: 20px;
-  left: 20px;
-}
-.artist-content .options .option.active .label .info > div {
-  left: 0px;
-  opacity: 1;
-}
-.artist-content .options .option:not(.active) {
-  flex-grow: 1;
-  border-radius: 30px;
-}
-.artist-content .options .option:not(.active) .shadow {
-  bottom: -40px;
-  box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
-}
-.artist-content .options .option:not(.active) .label {
-  bottom: 10px;
-  left: 10px;
-}
-.artist-content .options .option:not(.active) .label .info > div {
-  left: 20px;
-  opacity: 0;
-}
-.artist-content .options .option .shadow {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: 120px;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-}
-.artist-content .options .option .label {
-  display: flex;
-  position: absolute;
-  right: 0px;
-  height: 40px;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-}
-.artist-content .options .option .label .icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-width: 40px;
-  max-width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: white;
-  color: var(--defaultBackground);
-}
-.artist-content .options .option .label .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 10px;
-  color: white;
-  white-space: pre;
-}
-.artist-content .options .option .label .info > div {
-  position: relative;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
-}
-.artist-content .options .option .label .info .main {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-.artist-content .options .option .label .info .sub {
-  transition-delay: 0.1s;
+  height: 250px;
+  width: 250px;
 }
