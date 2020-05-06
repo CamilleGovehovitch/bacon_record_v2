@@ -42,7 +42,16 @@
                 </div>
             </div>
         </div>
-
+        <?php if(isset($newsLetterRecorded)) { ?>
+            <div id="newsLetterRecorded" style="background-color: rgba(148, 189, 143, 0.8);">
+                <p style="color: rgba(28, 116, 17, 1); font-size: 18px;"><?php echo $newsLetterRecorded ?></p>
+            </div>
+        <?php } ?>
+        <?php if(isset($errEmailExist)) { ?>
+            <div id="emailExist" style="background-color: rgba(230, 76, 76, 0.74);">
+                <p style="color: rgba(116, 17, 17, 1); font-size: 18px;"><?php echo $errEmailExist ?></p>
+            </div>
+        <?php } ?>
     </header>
     <header class="header-mobile">
         <div class="bandeau">
@@ -72,15 +81,16 @@
         </div>
         <div class="newsletter-container">
             <form method="POST" id="newsletterForm">
-                <label for="newsletter">Newsletter</label>
-                <input type="text" name="newsletter" id="newsletterInput" value="" placeholder="exemple@exemple.com" onkeyup="enableNewsletter()">
-                <input type="submit" value="Envoyer" id="submitBtn" disabled>
+                <label for="newsletterInput">Newsletter</label>
+                <input type="text" name="newsletter" id="newsletterInput" placeholder="exemple@exemple.com" onkeyup="enableNewsletter()">
+                <input type="submit" value="Envoyer" name="submitNewsLetter" id="submitNewsLetter" disabled>
             </form>
         </div>
     </footer>
     <script src="scripts/parallaxEffect.js"></script>
     <script src="scripts/navbarEffect.js"></script>
     <script src="scripts/newsContainerEffect.js"></script>
+<!--    <script src="scripts/ajaxRequestNewsLetter.js"></script>-->
     <script src="scripts/newsletterFormValidation.js"></script>
 </body>
 </html>

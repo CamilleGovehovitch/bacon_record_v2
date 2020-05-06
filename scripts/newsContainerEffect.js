@@ -1,6 +1,8 @@
+
 const newsContainer = document.getElementById('newsContainer');
 const newsCard = document.getElementById('newsCard');
 let newsFlag = true;
+
 
 newsContainer.addEventListener('mouseover', function(){
     newsContainer.classList.add('news-container-opened');
